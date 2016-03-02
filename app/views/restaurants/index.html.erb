@@ -1,0 +1,14 @@
+<div class= "container text-center">
+  <h1>Restaurant List</h1>
+  <%= link_to 'New restaurant', new_restaurant_path %>
+  <% @restaurants.each do |restaurant| %>
+    <ul>
+      <li><%= restaurant.name %></li>
+      <li><%= restaurant.address %></li>
+      <li><%= restaurant.phone_number %></li>
+      <li><%= restaurant.category %></li>
+      <li><%= link_to 'Update', edit_restaurant_path(restaurant) %></li>
+      <hr>
+    </ul>
+  <% end %>
+</div>
